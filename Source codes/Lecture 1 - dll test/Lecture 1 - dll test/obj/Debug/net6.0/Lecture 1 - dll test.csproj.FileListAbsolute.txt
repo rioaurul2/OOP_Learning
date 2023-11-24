@@ -1,0 +1,11 @@
+G:\Programe\OOP EXPERT\OOP Learning\Source codes\Lecture 1 - dll test\Lecture 1 - dll test\bin\Debug\net6.0\Lecture 1 - dll test.deps.json
+G:\Programe\OOP EXPERT\OOP Learning\Source codes\Lecture 1 - dll test\Lecture 1 - dll test\bin\Debug\net6.0\Lecture 1 - dll test.dll
+G:\Programe\OOP EXPERT\OOP Learning\Source codes\Lecture 1 - dll test\Lecture 1 - dll test\bin\Debug\net6.0\Lecture 1 - dll test.pdb
+G:\Programe\OOP EXPERT\OOP Learning\Source codes\Lecture 1 - dll test\Lecture 1 - dll test\obj\Debug\net6.0\Lecture 1 - dll test.GeneratedMSBuildEditorConfig.editorconfig
+G:\Programe\OOP EXPERT\OOP Learning\Source codes\Lecture 1 - dll test\Lecture 1 - dll test\obj\Debug\net6.0\Lecture 1 - dll test.AssemblyInfoInputs.cache
+G:\Programe\OOP EXPERT\OOP Learning\Source codes\Lecture 1 - dll test\Lecture 1 - dll test\obj\Debug\net6.0\Lecture 1 - dll test.AssemblyInfo.cs
+G:\Programe\OOP EXPERT\OOP Learning\Source codes\Lecture 1 - dll test\Lecture 1 - dll test\obj\Debug\net6.0\Lecture 1 - dll test.csproj.CoreCompileInputs.cache
+G:\Programe\OOP EXPERT\OOP Learning\Source codes\Lecture 1 - dll test\Lecture 1 - dll test\obj\Debug\net6.0\Lecture 1 - dll test.dll
+G:\Programe\OOP EXPERT\OOP Learning\Source codes\Lecture 1 - dll test\Lecture 1 - dll test\obj\Debug\net6.0\refint\Lecture 1 - dll test.dll
+G:\Programe\OOP EXPERT\OOP Learning\Source codes\Lecture 1 - dll test\Lecture 1 - dll test\obj\Debug\net6.0\Lecture 1 - dll test.pdb
+G:\Programe\OOP EXPERT\OOP Learning\Source codes\Lecture 1 - dll test\Lecture 1 - dll test\obj\Debug\net6.0\ref\Lecture 1 - dll test.dll
