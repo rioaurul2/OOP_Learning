@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "G:\\Programe\\OOP EXPERT\\OOP Learning\\Source codes\\Lecture 1\\Lecture 1\\Lecture 1.csproj": {}
+    "G:\\Programe\\OOP Expert\\OOP_Learning\\Source codes\\Lecture 1\\Lecture 1\\Lecture 1.csproj": {}
   },
   "projects": {
-    "G:\\Programe\\OOP EXPERT\\OOP Learning\\Source codes\\Lecture 1\\Lecture 1\\Lecture 1.csproj": {
+    "G:\\Programe\\OOP Expert\\OOP_Learning\\Source codes\\Lecture 1\\Lecture 1\\Lecture 1.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "G:\\Programe\\OOP EXPERT\\OOP Learning\\Source codes\\Lecture 1\\Lecture 1\\Lecture 1.csproj",
+        "projectUniqueName": "G:\\Programe\\OOP Expert\\OOP_Learning\\Source codes\\Lecture 1\\Lecture 1\\Lecture 1.csproj",
         "projectName": "Lecture 1",
-        "projectPath": "G:\\Programe\\OOP EXPERT\\OOP Learning\\Source codes\\Lecture 1\\Lecture 1\\Lecture 1.csproj",
+        "projectPath": "G:\\Programe\\OOP Expert\\OOP_Learning\\Source codes\\Lecture 1\\Lecture 1\\Lecture 1.csproj",
         "packagesPath": "C:\\Users\\User\\.nuget\\packages\\",
-        "outputPath": "G:\\Programe\\OOP EXPERT\\OOP Learning\\Source codes\\Lecture 1\\Lecture 1\\obj\\",
+        "outputPath": "G:\\Programe\\OOP Expert\\OOP_Learning\\Source codes\\Lecture 1\\Lecture 1\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\User\\AppData\\Roaming\\NuGet\\NuGet.Config",
