@@ -1,31 +1,49 @@
-﻿using System.Diagnostics;
+﻿using Lecture_2;
+using System.Diagnostics;
 
 class Program
 {
     static void Main()
     {
         DictionaryIntExample intHelper = new();
+
         intHelper.GenerateDictionary(1000, 1, 110);
-        intHelper.PrintDictionary();
+        //intHelper.PrintDictionary();
 
         DictionaryCharExample charHelper = new();
+
         charHelper.GenerateDictionary(1000, 0, 26);
-        charHelper.PrintDictionary();
+        //charHelper.PrintDictionary();
 
         DictionaryStringAndCharExample dictionaryStringAndCharExample = new();
+
+        dictionaryStringAndCharExample.ExtensionClassExample();
 
         Console.WriteLine("Please write a number to see its randomly assigned character");
         string  insertedNumber = Console.ReadLine();
 
         while (string.IsNullOrEmpty(insertedNumber))
         {
+            Console.WriteLine("Please write a number lower than 1000 to see its randomly assigned character");
             Console.ReadLine();
-            Console.WriteLine("Please write a number to see its randomly assigned character");
         }
 
         dictionaryStringAndCharExample.GenerateDictionary(1000);
 
-        Console.WriteLine($" Your entered number is: {insertedNumber} - its randomly assigned character is '{dictionaryStringAndCharExample.dictionaryStringAndCharData[insertedNumber]}'");
+        try
+        {
+            Console.WriteLine(
+                    $"Your entered number is: {insertedNumber.JustAJoke()} " +
+                    $"- its randomly assigned character is '{dictionaryStringAndCharExample.dictionaryStringAndCharData[insertedNumber]}'" +
+                    $" and elapsed time was {dictionaryStringAndCharExample.timer.ElapsedMilliseconds.ToString("N0")} milisecons"
+                );
+        } catch (KeyNotFoundException ex)
+        {
+            Console.WriteLine("You inserted a number bigger than the maximum admisible number or you inserted a string, this is a learning project so I didn't add a solution for all errors");
+        }
+
+        ListWithTupleExample.FakeDictionaryInit();
+        Console.WriteLine(ListWithTupleExample.timer.ElapsedMilliseconds.ToString("N0"));
 
     }
 }
@@ -122,9 +140,9 @@ public class DictionaryCharExample
 
 public class DictionaryStringAndCharExample
 {
-    private Stopwatch timer = new();
-    private Random randGenerator = new();
-    private List<char> charList = Enumerable.Range('a', 'z' - 'a' + 1).Select(i => (char)i).ToList();
+    public readonly Stopwatch timer = new();
+    private readonly Random randGenerator = new();
+    private readonly List<char> charList = Enumerable.Range('a', 'z' - 'a' + 1).Select(i => (char)i).ToList();
     public Dictionary<string, char> dictionaryStringAndCharData = new();
 
     public void GenerateDictionary(int numberOfNumbers)
@@ -132,7 +150,7 @@ public class DictionaryStringAndCharExample
         timer.Start();
         for (int i = 0; i < numberOfNumbers; i++)
         {
-            AddToDictionary(i.ToString());
+            dictionaryStringAndCharData.Add(i.ToString(), charList[randGenerator.Next(0, charList.Count - 1)]);
         }
         timer.Stop();
     }
@@ -146,12 +164,25 @@ public class DictionaryStringAndCharExample
             Console.WriteLine($"The number {number.Key} appears {number.Value} times");
         }
 
-        Console.WriteLine($"\n\r\n\rThe numbers were generated in {timer.ElapsedMilliseconds.ToString("N0")} milliseconds");
+        Console.WriteLine($"\n\rThe numbers were generated in {timer.ElapsedMilliseconds.ToString("N0")} milliseconds");
         timer.Reset();
     } 
+}
 
-    private void AddToDictionary(string key)
+public class ListWithTupleExample
+{
+    public static List<Tuple<string, char>> fakeDictionary = new();
+    public static readonly Stopwatch timer = new();
+    private static readonly Random randGenerator = new();
+    private static readonly List<char> charList = Enumerable.Range('a', 'z' - 'a' + 1).Select(i => (char)i).ToList();
+
+    public static void FakeDictionaryInit()
     {
-        dictionaryStringAndCharData.Add(key, charList[randGenerator.Next(0, charList.Count - 1)]);
+        timer.Start();
+        for (int i = 0; i < 10000; i++)
+        {
+            fakeDictionary.Add(new Tuple <string, char>(i.ToString(), charList[randGenerator.Next(0, charList.Count - 1)]));
+        }
+        timer.Stop();
     }
 }
