@@ -1,0 +1,22 @@
+G:\Programe\OOP Expert\OOP_Learning\Source codes\Lecture 3 part 2 wpf\Lecture 3 part 2 wpf\bin\Debug\net6.0-windows\Lecture 3 part 2 wpf.exe
+G:\Programe\OOP Expert\OOP_Learning\Source codes\Lecture 3 part 2 wpf\Lecture 3 part 2 wpf\bin\Debug\net6.0-windows\Lecture 3 part 2 wpf.deps.json
+G:\Programe\OOP Expert\OOP_Learning\Source codes\Lecture 3 part 2 wpf\Lecture 3 part 2 wpf\bin\Debug\net6.0-windows\Lecture 3 part 2 wpf.runtimeconfig.json
+G:\Programe\OOP Expert\OOP_Learning\Source codes\Lecture 3 part 2 wpf\Lecture 3 part 2 wpf\bin\Debug\net6.0-windows\Lecture 3 part 2 wpf.dll
+G:\Programe\OOP Expert\OOP_Learning\Source codes\Lecture 3 part 2 wpf\Lecture 3 part 2 wpf\bin\Debug\net6.0-windows\Lecture 3 part 2 wpf.pdb
+G:\Programe\OOP Expert\OOP_Learning\Source codes\Lecture 3 part 2 wpf\Lecture 3 part 2 wpf\obj\Debug\net6.0-windows\MainWindow.g.cs
+G:\Programe\OOP Expert\OOP_Learning\Source codes\Lecture 3 part 2 wpf\Lecture 3 part 2 wpf\obj\Debug\net6.0-windows\App.g.cs
+G:\Programe\OOP Expert\OOP_Learning\Source codes\Lecture 3 part 2 wpf\Lecture 3 part 2 wpf\obj\Debug\net6.0-windows\Lecture 3 part 2 wpf_MarkupCompile.cache
+G:\Programe\OOP Expert\OOP_Learning\Source codes\Lecture 3 part 2 wpf\Lecture 3 part 2 wpf\obj\Debug\net6.0-windows\Lecture 3 part 2 wpf_MarkupCompile.lref
+G:\Programe\OOP Expert\OOP_Learning\Source codes\Lecture 3 part 2 wpf\Lecture 3 part 2 wpf\obj\Debug\net6.0-windows\MainWindow.baml
+G:\Programe\OOP Expert\OOP_Learning\Source codes\Lecture 3 part 2 wpf\Lecture 3 part 2 wpf\obj\Debug\net6.0-windows\Lecture 3 part 2 wpf.g.resources
+G:\Programe\OOP Expert\OOP_Learning\Source codes\Lecture 3 part 2 wpf\Lecture 3 part 2 wpf\obj\Debug\net6.0-windows\Lecture 3 part 2 wpf.GeneratedMSBuildEditorConfig.editorconfig
+G:\Programe\OOP Expert\OOP_Learning\Source codes\Lecture 3 part 2 wpf\Lecture 3 part 2 wpf\obj\Debug\net6.0-windows\Lecture 3 part 2 wpf.AssemblyInfoInputs.cache
+G:\Programe\OOP Expert\OOP_Learning\Source codes\Lecture 3 part 2 wpf\Lecture 3 part 2 wpf\obj\Debug\net6.0-windows\Lecture 3 part 2 wpf.AssemblyInfo.cs
+G:\Programe\OOP Expert\OOP_Learning\Source codes\Lecture 3 part 2 wpf\Lecture 3 part 2 wpf\obj\Debug\net6.0-windows\Lecture 3 part 2 wpf.csproj.CoreCompileInputs.cache
+G:\Programe\OOP Expert\OOP_Learning\Source codes\Lecture 3 part 2 wpf\Lecture 3 part 2 wpf\obj\Debug\net6.0-windows\Lecture 3 part 2 wpf.dll
+G:\Programe\OOP Expert\OOP_Learning\Source codes\Lecture 3 part 2 wpf\Lecture 3 part 2 wpf\obj\Debug\net6.0-windows\refint\Lecture 3 part 2 wpf.dll
+G:\Programe\OOP Expert\OOP_Learning\Source codes\Lecture 3 part 2 wpf\Lecture 3 part 2 wpf\obj\Debug\net6.0-windows\Lecture 3 part 2 wpf.pdb
+G:\Programe\OOP Expert\OOP_Learning\Source codes\Lecture 3 part 2 wpf\Lecture 3 part 2 wpf\obj\Debug\net6.0-windows\Lecture 3 part 2 wpf.genruntimeconfig.cache
+G:\Programe\OOP Expert\OOP_Learning\Source codes\Lecture 3 part 2 wpf\Lecture 3 part 2 wpf\obj\Debug\net6.0-windows\ref\Lecture 3 part 2 wpf.dll
+G:\Programe\OOP Expert\OOP_Learning\Source codes\Lecture 3 part 2 wpf\Lecture 3 part 2 wpf\obj\Debug\net6.0-windows\SecondWindow.g.cs
+G:\Programe\OOP Expert\OOP_Learning\Source codes\Lecture 3 part 2 wpf\Lecture 3 part 2 wpf\obj\Debug\net6.0-windows\SecondWindow.baml

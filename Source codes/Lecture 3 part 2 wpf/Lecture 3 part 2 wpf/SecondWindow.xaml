@@ -1,0 +1,15 @@
+﻿<Window x:Class="Lecture_3_part_2_wpf.SecondWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Lecture_3_part_2_wpf"
+        mc:Ignorable="d"
+        Title="SecondWindow" Height="450" Width="800">
+    <Grid>
+        <Button x:Name="btnNumbersGenerator" Content="Generate numbers and add to dictionary" HorizontalAlignment="Left" Margin="10,36,0,0" VerticalAlignment="Top" Width="223" Click="btnNumbersGenerator_Click" Height="38"/>
+        <ListBox x:Name="lstBoxStatictics" d:ItemsSource="{d:SampleData ItemCount=5}" Margin="10,79,322,122"/>
+        <Button x:Name="previousWindow" Content="Back" HorizontalAlignment="Left" Height="21" Margin="10,5,0,0" VerticalAlignment="Top" Width="116" Click="previousWindow_Click"/>
+
+    </Grid>
+</Window>

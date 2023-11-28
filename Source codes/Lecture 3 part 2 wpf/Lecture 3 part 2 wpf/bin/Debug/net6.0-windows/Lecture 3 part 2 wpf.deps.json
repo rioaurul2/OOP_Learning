@@ -1,0 +1,23 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v6.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v6.0": {
+      "Lecture 3 part 2 wpf/1.0.0": {
+        "runtime": {
+          "Lecture 3 part 2 wpf.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "Lecture 3 part 2 wpf/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

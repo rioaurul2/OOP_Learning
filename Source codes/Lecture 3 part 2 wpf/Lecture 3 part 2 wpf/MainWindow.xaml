@@ -1,0 +1,24 @@
+﻿<Window x:Class="Lecture_3_part_2_wpf.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Lecture_3_part_2_wpf"
+        mc:Ignorable="d"
+        Title="Lecture 3" Height="800" Width="1600">
+    <Grid>
+        <TextBox Name="txt1" HorizontalAlignment="Left" Margin="60,50,0,0" TextWrapping="Wrap" Text="First Input" VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name="txt2" HorizontalAlignment="Left" Margin="218,50,0,0" TextWrapping="Wrap" Text="Second Input" VerticalAlignment="Top" Width="120"/>
+        <Button x:Name="btnJoinStrings" Content="Join buttons" HorizontalAlignment="Left" Margin="384,50,0,0" VerticalAlignment="Top" Height="18" Width="84" Click="BtnJoinStrings_Click"/>
+        <TextBox x:Name="txtSplitBox" HorizontalAlignment="Left" Margin="60,98,0,0" TextWrapping="Wrap" Text="Type split text" VerticalAlignment="Top" Width="158" Height="140"/>
+        <TextBox x:Name="txtSplitParameter" HorizontalAlignment="Left" Height="70" Margin="234,98,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="104"/>
+        <ListBox x:Name="lstSplitResults" d:ItemsSource="{d:SampleData ItemCount=5}" Margin="60,250,1132,425" SelectionChanged="lstSplitResults_SelectionChanged"/>
+        <Button x:Name="splitText" Content="Split the text" HorizontalAlignment="Left" Margin="343,98,0,0" VerticalAlignment="Top" Click="splitText_Click"/>
+        <Button x:Name="splitBoxClear" Content="Clear" HorizontalAlignment="Left" Margin="343,148,0,0" VerticalAlignment="Top" Width="71" Click="splitBoxClear_Click"/>
+        <TextBox x:Name="insertPosition" HorizontalAlignment="Left" Height="20" Margin="234,182,0,0" TextWrapping="Wrap" Text="Insert to position" VerticalAlignment="Top" Width="104"/>
+        <TextBox x:Name="newValueOfListBox" HorizontalAlignment="Left" Height="20" Margin="234,213,0,0" TextWrapping="Wrap" Text="Enter new value" VerticalAlignment="Top" Width="104" Visibility="Hidden"/>
+        <Button x:Name="btnSaveNewValueOfListBox" Content="Save" HorizontalAlignment="Left" Margin="343,213,0,0" VerticalAlignment="Top" Width="71" Click="btnSaveNewValueOfListBox_Click" Visibility="Hidden"/>
+        <Button x:Name="nextWindow" Content="Next window" HorizontalAlignment="Left" Height="43" Margin="584,16,0,0" VerticalAlignment="Top" Width="150" Click="nextWindow_Click"/>
+
+    </Grid>
+</Window>

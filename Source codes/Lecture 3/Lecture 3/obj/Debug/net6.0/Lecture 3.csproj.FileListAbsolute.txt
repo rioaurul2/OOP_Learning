@@ -1,0 +1,14 @@
+G:\Programe\OOP Expert\OOP_Learning\Source codes\Lecture 3\Lecture 3\bin\Debug\net6.0\Lecture 3.exe
+G:\Programe\OOP Expert\OOP_Learning\Source codes\Lecture 3\Lecture 3\bin\Debug\net6.0\Lecture 3.deps.json
+G:\Programe\OOP Expert\OOP_Learning\Source codes\Lecture 3\Lecture 3\bin\Debug\net6.0\Lecture 3.runtimeconfig.json
+G:\Programe\OOP Expert\OOP_Learning\Source codes\Lecture 3\Lecture 3\bin\Debug\net6.0\Lecture 3.dll
+G:\Programe\OOP Expert\OOP_Learning\Source codes\Lecture 3\Lecture 3\bin\Debug\net6.0\Lecture 3.pdb
+G:\Programe\OOP Expert\OOP_Learning\Source codes\Lecture 3\Lecture 3\obj\Debug\net6.0\Lecture 3.GeneratedMSBuildEditorConfig.editorconfig
+G:\Programe\OOP Expert\OOP_Learning\Source codes\Lecture 3\Lecture 3\obj\Debug\net6.0\Lecture 3.AssemblyInfoInputs.cache
+G:\Programe\OOP Expert\OOP_Learning\Source codes\Lecture 3\Lecture 3\obj\Debug\net6.0\Lecture 3.AssemblyInfo.cs
+G:\Programe\OOP Expert\OOP_Learning\Source codes\Lecture 3\Lecture 3\obj\Debug\net6.0\Lecture 3.csproj.CoreCompileInputs.cache
+G:\Programe\OOP Expert\OOP_Learning\Source codes\Lecture 3\Lecture 3\obj\Debug\net6.0\Lecture 3.dll
+G:\Programe\OOP Expert\OOP_Learning\Source codes\Lecture 3\Lecture 3\obj\Debug\net6.0\refint\Lecture 3.dll
+G:\Programe\OOP Expert\OOP_Learning\Source codes\Lecture 3\Lecture 3\obj\Debug\net6.0\Lecture 3.pdb
+G:\Programe\OOP Expert\OOP_Learning\Source codes\Lecture 3\Lecture 3\obj\Debug\net6.0\Lecture 3.genruntimeconfig.cache
+G:\Programe\OOP Expert\OOP_Learning\Source codes\Lecture 3\Lecture 3\obj\Debug\net6.0\ref\Lecture 3.dll
