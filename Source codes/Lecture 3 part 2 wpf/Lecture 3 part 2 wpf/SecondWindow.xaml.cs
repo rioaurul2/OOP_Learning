@@ -5,6 +5,8 @@ using System.IO;
 using System.Linq;
 using System.Reflection;
 using System.Text;
+using System.Threading;
+using System.Threading.Tasks;
 using System.Windows;
 
 
@@ -36,6 +38,19 @@ namespace Lecture_3_part_2_wpf
 
         private void btnNumbersGenerator_Click(object sender, RoutedEventArgs e)
         {
+            var vrId = Thread.CurrentThread.ManagedThreadId;
+            Debug.WriteLine($"Current thread id = {vrId} ");
+            Task.Factory.StartNew(() => {
+                //Everything that will be in this block will be executed on the thread pool
+                //Using this will prevent main thread nor the UI thread from freezing
+                vrId = Thread.CurrentThread.ManagedThreadId;
+                Debug.WriteLine($"Current thread id task factory = {vrId} ");
+                generateRandomNumbersMethod();
+            });
+        }
+
+        private void generateRandomNumbersMethod()
+        {
             Random randomGenerator = new();
 
             generatedNumbers.Clear();
@@ -44,7 +59,8 @@ namespace Lecture_3_part_2_wpf
             {
                 int randomNumber = randomGenerator.Next(1, 10000);
 
-                if (generatedNumbers.ContainsKey(randomNumber)) {
+                if (generatedNumbers.ContainsKey(randomNumber))
+                {
                     generatedNumbers[randomNumber] += 1;
                 }
                 else
@@ -55,18 +71,20 @@ namespace Lecture_3_part_2_wpf
                 UpdateStatistics();
 
             }
-
         }
 
         void UpdateStatistics()
         {
-            lstBoxStatictics.Items.Clear();
-            lstBoxStatictics.Items.Add($"number of elements in dictionary:{generatedNumbers.Count}");
-            lstBoxStatictics.Items.Add($"First key in the dictionary:{generatedNumbers.Keys.FirstOrDefault()}");
-            lstBoxStatictics.Items.Add($"Last key in the dictionary:{generatedNumbers.Keys.LastOrDefault()}");
-            lstBoxStatictics.Items.Add($"Biggest key in the dictionary:{generatedNumbers.Keys.OrderByDescending(key=> key).FirstOrDefault()}");
-            lstBoxStatictics.Items.Add($"Smallest key in the dictionary:{generatedNumbers.Keys.OrderBy(key => key).FirstOrDefault()}");
-            lstBoxStatictics.Items.Add($"Sum of keys in the dictionary:{generatedNumbers.Keys.Sum(key => key)}");
+            this.Dispatcher.Invoke(() =>
+            {
+                lstBoxStatictics.Items.Clear();
+                lstBoxStatictics.Items.Add($"number of elements in dictionary:{generatedNumbers.Count}");
+                lstBoxStatictics.Items.Add($"First key in the dictionary:{generatedNumbers.Keys.FirstOrDefault()}");
+                lstBoxStatictics.Items.Add($"Last key in the dictionary:{generatedNumbers.Keys.LastOrDefault()}");
+                lstBoxStatictics.Items.Add($"Biggest key in the dictionary:{generatedNumbers.Keys.OrderByDescending(key => key).FirstOrDefault()}");
+                lstBoxStatictics.Items.Add($"Smallest key in the dictionary:{generatedNumbers.Keys.OrderBy(key => key).FirstOrDefault()}");
+                lstBoxStatictics.Items.Add($"Sum of keys in the dictionary:{generatedNumbers.Keys.Sum(key => key)}");
+            });
         }
 
         private void previousWindow_Click(object sender, RoutedEventArgs e)
