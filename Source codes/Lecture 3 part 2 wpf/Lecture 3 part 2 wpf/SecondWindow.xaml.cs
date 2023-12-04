@@ -35,6 +35,7 @@ namespace Lecture_3_part_2_wpf
         }
 
         Dictionary<int, int> generatedNumbers = new();
+        private readonly object lockObject = new object();
 
         private void btnNumbersGenerator_Click(object sender, RoutedEventArgs e)
         {
@@ -53,38 +54,59 @@ namespace Lecture_3_part_2_wpf
         {
             Random randomGenerator = new();
 
-            generatedNumbers.Clear();
-
-            for (int i = 0; i < 10000; i++)
+            lock (lockObject)
             {
-                int randomNumber = randomGenerator.Next(1, 10000);
+                generatedNumbers.Clear();
 
-                if (generatedNumbers.ContainsKey(randomNumber))
+                for (int i = 0; i < 10000; i++)
                 {
-                    generatedNumbers[randomNumber] += 1;
-                }
-                else
-                {
-                    generatedNumbers.Add(randomNumber, 1);
-                }
+                    int randomNumber = randomGenerator.Next(1, 10000);
 
-                UpdateStatistics();
-
+                    if (generatedNumbers.ContainsKey(randomNumber))
+                    {
+                        generatedNumbers[randomNumber] += 1;
+                    }
+                    else
+                    {
+                        generatedNumbers.Add(randomNumber, 1);
+                    }
+                }
             }
+
+            UpdateStatistics();
         }
 
         void UpdateStatistics()
         {
-            this.Dispatcher.Invoke(() =>
+            var statistics = CalculateStatistics();
+
+            lock (lockObject)
             {
-                lstBoxStatictics.Items.Clear();
-                lstBoxStatictics.Items.Add($"number of elements in dictionary:{generatedNumbers.Count}");
-                lstBoxStatictics.Items.Add($"First key in the dictionary:{generatedNumbers.Keys.FirstOrDefault()}");
-                lstBoxStatictics.Items.Add($"Last key in the dictionary:{generatedNumbers.Keys.LastOrDefault()}");
-                lstBoxStatictics.Items.Add($"Biggest key in the dictionary:{generatedNumbers.Keys.OrderByDescending(key => key).FirstOrDefault()}");
-                lstBoxStatictics.Items.Add($"Smallest key in the dictionary:{generatedNumbers.Keys.OrderBy(key => key).FirstOrDefault()}");
-                lstBoxStatictics.Items.Add($"Sum of keys in the dictionary:{generatedNumbers.Keys.Sum(key => key)}");
-            });
+                Dispatcher.BeginInvoke(new Action(delegate ()
+                {
+                    lstBoxStatictics.Items.Clear();
+
+                    foreach (var statistic in statistics)
+                    {
+                        lstBoxStatictics.Items.Add(statistic);
+                    }
+                }));
+            }
+        }
+
+        private List<string> CalculateStatistics()
+        {
+            var statistics = new List<string>();
+
+            statistics.Add($"number of elements in dictionary:{generatedNumbers.Count}");
+            statistics.Add($"First key in the dictionary:{generatedNumbers.Keys.FirstOrDefault()}");
+            statistics.Add($"Last key in the dictionary:{generatedNumbers.Keys.LastOrDefault()}");
+            statistics.Add($"Biggest key in the dictionary:{generatedNumbers.Keys.OrderByDescending(key => key).FirstOrDefault()}");
+            statistics.Add($"Smallest key in the dictionary:{generatedNumbers.Keys.OrderBy(key => key).FirstOrDefault()}");
+            statistics.Add($"Sum of keys in the dictionary:{generatedNumbers.Keys.Sum(key => key)}");
+
+            return statistics;
+
         }
 
         private void previousWindow_Click(object sender, RoutedEventArgs e)
@@ -117,26 +139,36 @@ namespace Lecture_3_part_2_wpf
 
         private void writeToFile_Click(object sender, RoutedEventArgs e)
         {
+            var vrId = Thread.CurrentThread.ManagedThreadId;
+
             switch (fileWritingMethod.SelectedIndex)
             {
                 case 0:
                     MessageBox.Show("No writing method selected");
                     break;
                 case 1:
-                    WriteFileWithAllLines();
+                    Task.Factory.StartNew(() => {
+                        vrId = Thread.CurrentThread.ManagedThreadId;
+                        Debug.WriteLine($"Current thread id task factory = {vrId} ");
+                        WriteFileWithAllLines();
+                    }).ContinueWith( completed => ExecuteFinalTask());
                     break;
                 case 2:
-                    WriteFileWithStreamWriterNoAutoFlush();
-                    WriteFileWithStreamWriterAutoFlush();
+                    Task.Factory.StartNew(() => {
+                        vrId = Thread.CurrentThread.ManagedThreadId;
+                        Debug.WriteLine($"Current thread id task factory = {vrId} ");
+                        WriteFileWithStreamWriterNoAutoFlush();
+                        WriteFileWithStreamWriterAutoFlush();
+                    }).ContinueWith(completed => ExecuteFinalTask());
                     break;
                 case 3:
-                    WriteStringBuilder();
+                    Task.Factory.StartNew(() => {
+                        vrId = Thread.CurrentThread.ManagedThreadId;
+                        Debug.WriteLine($"Current thread id task factory = {vrId} ");
+                        WriteStringBuilder();
+                    }).ContinueWith(completed => ExecuteFinalTask());
                     break;
             }
-
-            var exePath = System.IO.Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location);
-            Process.Start("explorer.exe",exePath);
-            GC.Collect();
         }
 
         private void WriteFileWithAllLines()
@@ -151,7 +183,7 @@ namespace Lecture_3_part_2_wpf
 
             timer.Stop();
 
-            lstBoxStatictics.Items.Insert(0, "WriteFileWithAllLines took :" + timer.ElapsedMilliseconds.ToString("N0") + " ms");
+            UpdateListBox("WriteFileWithAllLines took :" + timer.ElapsedMilliseconds.ToString("N0") + " ms", 0);
         }
 
         private void WriteFileWithStreamWriterNoAutoFlush()
@@ -174,7 +206,7 @@ namespace Lecture_3_part_2_wpf
 
             timer.Stop();
 
-            lstBoxStatictics.Items.Insert(0, "WriteFileWithStreamWriterNoAutoFlush took :" + timer.ElapsedMilliseconds.ToString("N0") + " ms");
+            UpdateListBox("WriteFileWithStreamWriterNoAutoFlush took :" + timer.ElapsedMilliseconds.ToString("N0") + " ms", 0);
         }
 
         private void WriteFileWithStreamWriterAutoFlush()
@@ -198,7 +230,7 @@ namespace Lecture_3_part_2_wpf
 
             timer.Stop();
 
-            lstBoxStatictics.Items.Insert(0, "WriteFileWithStreamWriterAutoFlush took :" + timer.ElapsedMilliseconds.ToString("N0") + " ms");
+            UpdateListBox("WriteFileWithStreamWriterAutoFlush took :" + timer.ElapsedMilliseconds.ToString("N0") + " ms", 0);
         }
 
         private void WriteStringBuilder()
@@ -219,8 +251,22 @@ namespace Lecture_3_part_2_wpf
             File.WriteAllText(fileName, strBuilder.ToString());
 
             timer.Stop();
+            UpdateListBox("WriteStringBuilder took :" + timer.ElapsedMilliseconds.ToString("N0") + " ms", 0);
+        }
 
-            lstBoxStatictics.Items.Insert(0, "WriteStringBuilder took :" + timer.ElapsedMilliseconds.ToString("N0") + " ms");
+        private void UpdateListBox(string message, int index)
+        {
+            Dispatcher.BeginInvoke(new Action(delegate ()
+            {
+                lstBoxStatictics.Items.Insert(index, message);
+            }));
+        }
+
+        private void ExecuteFinalTask()
+        {
+            var exePath = System.IO.Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location);
+            Process.Start("explorer.exe", exePath);
+            GC.Collect();
         }
     }
 }
