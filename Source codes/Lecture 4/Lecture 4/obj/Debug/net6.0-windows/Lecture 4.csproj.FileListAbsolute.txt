@@ -1,0 +1,20 @@
+G:\Programe\OOP Expert\OOP_Learning\Source codes\Lecture 4\Lecture 4\bin\Debug\net6.0-windows\Lecture 4.exe
+G:\Programe\OOP Expert\OOP_Learning\Source codes\Lecture 4\Lecture 4\bin\Debug\net6.0-windows\Lecture 4.deps.json
+G:\Programe\OOP Expert\OOP_Learning\Source codes\Lecture 4\Lecture 4\bin\Debug\net6.0-windows\Lecture 4.runtimeconfig.json
+G:\Programe\OOP Expert\OOP_Learning\Source codes\Lecture 4\Lecture 4\bin\Debug\net6.0-windows\Lecture 4.dll
+G:\Programe\OOP Expert\OOP_Learning\Source codes\Lecture 4\Lecture 4\bin\Debug\net6.0-windows\Lecture 4.pdb
+G:\Programe\OOP Expert\OOP_Learning\Source codes\Lecture 4\Lecture 4\obj\Debug\net6.0-windows\MainWindow.g.cs
+G:\Programe\OOP Expert\OOP_Learning\Source codes\Lecture 4\Lecture 4\obj\Debug\net6.0-windows\App.g.cs
+G:\Programe\OOP Expert\OOP_Learning\Source codes\Lecture 4\Lecture 4\obj\Debug\net6.0-windows\Lecture 4_MarkupCompile.cache
+G:\Programe\OOP Expert\OOP_Learning\Source codes\Lecture 4\Lecture 4\obj\Debug\net6.0-windows\Lecture 4_MarkupCompile.lref
+G:\Programe\OOP Expert\OOP_Learning\Source codes\Lecture 4\Lecture 4\obj\Debug\net6.0-windows\MainWindow.baml
+G:\Programe\OOP Expert\OOP_Learning\Source codes\Lecture 4\Lecture 4\obj\Debug\net6.0-windows\Lecture 4.g.resources
+G:\Programe\OOP Expert\OOP_Learning\Source codes\Lecture 4\Lecture 4\obj\Debug\net6.0-windows\Lecture 4.GeneratedMSBuildEditorConfig.editorconfig
+G:\Programe\OOP Expert\OOP_Learning\Source codes\Lecture 4\Lecture 4\obj\Debug\net6.0-windows\Lecture 4.AssemblyInfoInputs.cache
+G:\Programe\OOP Expert\OOP_Learning\Source codes\Lecture 4\Lecture 4\obj\Debug\net6.0-windows\Lecture 4.AssemblyInfo.cs
+G:\Programe\OOP Expert\OOP_Learning\Source codes\Lecture 4\Lecture 4\obj\Debug\net6.0-windows\Lecture 4.csproj.CoreCompileInputs.cache
+G:\Programe\OOP Expert\OOP_Learning\Source codes\Lecture 4\Lecture 4\obj\Debug\net6.0-windows\Lecture 4.dll
+G:\Programe\OOP Expert\OOP_Learning\Source codes\Lecture 4\Lecture 4\obj\Debug\net6.0-windows\refint\Lecture 4.dll
+G:\Programe\OOP Expert\OOP_Learning\Source codes\Lecture 4\Lecture 4\obj\Debug\net6.0-windows\Lecture 4.pdb
+G:\Programe\OOP Expert\OOP_Learning\Source codes\Lecture 4\Lecture 4\obj\Debug\net6.0-windows\Lecture 4.genruntimeconfig.cache
+G:\Programe\OOP Expert\OOP_Learning\Source codes\Lecture 4\Lecture 4\obj\Debug\net6.0-windows\ref\Lecture 4.dll
