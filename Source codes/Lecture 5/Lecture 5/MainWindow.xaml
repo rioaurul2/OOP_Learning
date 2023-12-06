@@ -1,0 +1,16 @@
+﻿<Window x:Class="Lecture_5.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Lecture_5"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        <Button x:Name="shallowClonning" Content="Shallow clonning" HorizontalAlignment="Left" Height="54" Margin="38,26,0,0" VerticalAlignment="Top" Width="162" Click="shallowClonning_Click"/>
+        <ListBox x:Name="listResults" d:ItemsSource="{d:SampleData ItemCount=5}" Margin="38,108,262,108"/>
+        <Button x:Name="refreshListBox" Content="Refresh Listbox" HorizontalAlignment="Left" Height="54" Margin="242,26,0,0" VerticalAlignment="Top" Width="134" Click="refreshListBox_Click"/>
+        <Button x:Name="clearBoxList" Content="Clear list" HorizontalAlignment="Left" Height="54" Margin="400,26,0,0" VerticalAlignment="Top" Width="138" Click="clearBoxList_Click"/>
+
+    </Grid>
+</Window>
