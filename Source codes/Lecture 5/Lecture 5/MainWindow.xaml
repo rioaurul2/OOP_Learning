@@ -5,12 +5,14 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Lecture_5"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
-    <Grid>
-        <Button x:Name="shallowClonning" Content="Shallow clonning" HorizontalAlignment="Left" Height="54" Margin="38,26,0,0" VerticalAlignment="Top" Width="162" Click="shallowClonning_Click"/>
-        <ListBox x:Name="listResults" d:ItemsSource="{d:SampleData ItemCount=5}" Margin="38,108,262,108"/>
-        <Button x:Name="refreshListBox" Content="Refresh Listbox" HorizontalAlignment="Left" Height="54" Margin="242,26,0,0" VerticalAlignment="Top" Width="134" Click="refreshListBox_Click"/>
-        <Button x:Name="clearBoxList" Content="Clear list" HorizontalAlignment="Left" Height="54" Margin="400,26,0,0" VerticalAlignment="Top" Width="138" Click="clearBoxList_Click"/>
+        Title="MainWindow" Height="750" Width="800">
+    <Grid Margin="0,0,0,-6">
+        <Button x:Name="shallowClonning" Content="Shallow clonning" HorizontalAlignment="Left" Height="54" Margin="38,26,0,0" VerticalAlignment="Top" Width="138" Click="shallowClonning_Click"/>
+        <ListBox x:Name="listResults" d:ItemsSource="{d:SampleData ItemCount=5}" Margin="38,163,150,370"/>
+        <Button x:Name="refreshListBox" Content="Refresh Listbox" HorizontalAlignment="Left" Height="54" Margin="208,26,0,0" VerticalAlignment="Top" Width="134" Click="refreshListBox_Click"/>
+        <Button x:Name="clearBoxList" Content="Clear list" HorizontalAlignment="Left" Height="34" Margin="38,105,0,0" VerticalAlignment="Top" Width="138" Click="clearBoxList_Click"/>
+        <Button x:Name="deepCopy" Content="Deep copy" HorizontalAlignment="Left" Height="54" Margin="380,26,0,0" VerticalAlignment="Top" Width="133" Click="deepCopy_Click"/>
+        <Button x:Name="refParamDifference" Content="Ref param usage and diff" HorizontalAlignment="Left" Height="34" Margin="208,105,0,0" VerticalAlignment="Top" Width="305" Click="refParamDifference_Click"/>
 
     </Grid>
 </Window>
